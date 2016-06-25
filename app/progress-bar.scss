@@ -43,7 +43,7 @@
     }
   }
 }
-
+//:not(:last-child)
 .my-progress-bar .step.completed {
   .divider-bar {
     width: 100%;
@@ -61,6 +61,18 @@
 
   .step-icon {
     background: url("http://localhost:8080/images/info.svg") no-repeat;
+  }
+}
+
+.my-progress-bar .step:last-child.active {
+  .divider-bar {
+    width: 100%;
+  }
+}
+
+.my-progress-bar .step:first-child.active {
+  .divider-bar {
+    width: 0%;
   }
 }
 
