@@ -1,0 +1,78 @@
+.my-progress-bar {
+  margin: 40px 40px;
+  .step {
+    width: 25%;
+    float: left;
+    min-height: 1px;
+    padding: 0;
+    position: relative;
+
+    .progress {
+      position: relative;
+    }
+    .divider {
+      position: relative;
+      border-radius: 0px;
+      height: 8px;
+      box-shadow: none;
+      margin: 20px 0;
+      background-color: #f5f5f5;
+      top: -15px;
+    }
+
+    .divider-bar {
+      height: 8px;
+      background-color: #03c4ab;
+      width: 0;
+    }
+
+    .step-title {
+      text-align: center;
+      margin-left: 15px;
+    }
+
+    .step-icon {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      display: block;
+      top: 0px;
+      left: 50%;
+
+      background: url("http://localhost:8080/images/error.svg") no-repeat;
+    }
+  }
+}
+
+.my-progress-bar .step.completed {
+  .divider-bar {
+    width: 100%;
+  }
+
+  .step-icon {
+    background: url("http://localhost:8080/images/success.svg") no-repeat;
+  }
+}
+
+.my-progress-bar .step.active {
+  .divider-bar {
+    width: 50%;
+  }
+
+  .step-icon {
+    background: url("http://localhost:8080/images/info.svg") no-repeat;
+  }
+}
+
+.my-progress-bar .step:first-child {
+  .divider {
+    left: 50%;
+    width: 50%;
+  }
+}
+
+.my-progress-bar .step:last-child {
+  .divider {
+    width: 50%;
+  }
+}
